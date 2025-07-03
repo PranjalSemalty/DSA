@@ -1,9 +1,10 @@
 # https://neetcode.io/problems/anagram-groups?list=neetcode250
 # NeetCode 250 - Arrays & Hashing
 # Difficulty: Medium
+from collections import defaultdict
 
 class Solution:
-    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+    def groupAnagrams(self, strs):
         res = defaultdict(list)
         for s in strs:
             sortedS = ''.join(sorted(s))
